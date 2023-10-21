@@ -1,15 +1,4 @@
-/*!
-    Title: Dev Portfolio Template
-    Version: 1.2.2
-    Last Change: 03/25/2020
-    Author: Ryan Fitzgerald
-    Repo: https://github.com/RyanFitzgerald/devportfolio-template
-    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
 
-    Description: This file contains all the styles associated with the page
-    that don't come from third party libraries. This file gets compiled using
-    Gulp and send to the /css folder which is then loaded on the page.
-*/
 body {
     font-family: "Lato", sans-serif;
     font-size: 16px;
@@ -461,20 +450,33 @@ footer {
     overflow: hidden;
     background: #fff;
     border-radius: 4px;
-    width: 90%;
-    display: flex;
-}
-
-
-.project-image img{
-    width: 100%;
-height: 100%;
-}
-.project-info {
-    margin: 20px;
+    width: 33%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    margin: 10px;
+}
+.row {
+    display: flex;
+    margin: 0 0 20px 0;
+}
+.project-image img {
+    width: 100%;
+    height: 100%;
+}
+.project-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+.project-type {
+    background-color: #4a04049c;
+    padding: 1px;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #000;
+    margin: 5px;
 }
 .project-info h3 {
     font-size: 1.5em;
@@ -725,10 +727,13 @@ height: 100%;
     }
 }
 @media only screen and (max-width: 480px) {
-    .project-links a{
+    .row {
+        flex-direction: column;
+    }
+    .project-links a {
         font-size: 13px;
     }
-    .project{
+    .project {
         width: 100%;
         flex-direction: column;
     }
@@ -744,15 +749,19 @@ height: 100%;
     }
 }
 
-.project-links a{
+.project-links a {
     color: #4a0404;
     margin: 10px;
 }
 
-@media (min-width: 1200px){
-.container {
-    width: 1250px;
-}}
+@media (min-width: 1200px) {
+    .container {
+        width: 1250px;
+    }
+    .projectsCont {
+        width: 100% !important;
+    }
+}
 
 .bannerSocial ul {
     margin: 5px 0 0 0;
@@ -773,12 +782,4 @@ height: 100%;
 }
 
 @media only screen and (min-width: 1040px) {
-    .project-info {
-        width: 50%;    }
-    .project-image {
-        width: 50%;
-    }
-    .project{
-        height: 300px;
-    }
 }
